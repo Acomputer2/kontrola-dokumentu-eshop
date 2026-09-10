@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+
+Sitemap: https://kontrola-dokumentu-eshop.cz/sitemap.xml
