@@ -1,74 +1,169 @@
-# Kontrola dokumentů e-shopu
+# Kontrola Dokumentů E-shop
 
-Moderní web pro službu kontroly dokumentů e-shopu. Vytvořeno s Next.js + React + TypeScript + TailwindCSS.
+Moderní webová aplikace pro kontrolu dokumentace e-shopů. Nechte si ověřit klíčové dokumenty vaší eshopu a získejte přehled o jejich aktuálnosti.
 
-## Struktura projektu
+## 🚀 Technologie
+
+- **Next.js 15** - React framework pro produkci
+- **TypeScript** - Type-safe JavaScript
+- **Tailwind CSS** - Utility-first CSS framework
+- **clsx** - Utility pro třídy
+- **Vercel** - Hosting a deployment
+
+## 📋 Funkčnosti
+
+- ✅ Interaktivní formulář pro zadání URL e-shopu
+- ✅ Přehledný náhled výsledků kontroly
+- ✅ Responzivní design (mobile-first)
+- ✅ Accessibility features (a11y)
+- ✅ SEO optimalizace (sitemap, robots.txt, JSON-LD)
+- ✅ Animace a micro-interactions
+- ✅ Validace formulářů
+- ✅ UI komponenty (Button, Badge, Alert)
+
+## 📁 Struktura projektu
 
 ```
-app/              - Next.js App Router
-  layout.tsx      - Root layout
-  page.tsx        - Hlavní stránka
-  globals.css     - Globální styly
-components/       - React komponenty
-  Header          - Sticky navigace
-  Hero            - Hero sekce s formulářem
-  TrustBar        - Trust strip
-  ProblemSection  - Problémy e-shopu
-  DocumentsGrid   - Co kontrolujeme
-  ProcessSteps    - Jak to funguje
-  Benefits        - Benefity
-  PricingSection  - Cena
-  FAQ             - Často kladené dotazy
-  FinalCTA        - Finální výzva
-  Footer          - Footer
-  forms/          - Formulářové komponenty
-public/           - Statické soubory
+.
+├── app/                      # Next.js app directory
+│   ├── layout.tsx           # Root layout
+│   ├── page.tsx             # Home page
+│   └── globals.css          # Global styles
+├── components/              # React komponenty
+│   ├── a11y/               # Accessibility komponenty
+│   ├── ui/                 # UI komponenty
+│   ├── forms/              # Form komponenty
+│   ├── Hero.tsx            # Hero section
+│   ├── Header.tsx          # Header
+│   ├── Footer.tsx          # Footer
+│   └── ...                 # Ostatní sekce
+├── lib/                     # Utility funkce
+│   ├── seo.ts              # SEO metadata
+│   └── urlValidation.ts    # URL validace
+├── public/                  # Statické soubory
+│   ├── sitemap.xml         # XML sitemap
+│   └── robots.txt          # Robots.txt
+├── styles/                  # CSS soubory
+└── tailwind.config.ts       # Tailwind CSS konfigurace
 ```
 
-## Instalace
+## 🛠️ Instalace a běh
+
+### Prerequisites
+- Node.js 20+
+- npm nebo yarn
+
+### Instalace
 
 ```bash
+# Klonování repozitáře
+git clone https://github.com/yourusername/kontrola-dokumentu-eshop.git
+cd kontrola-dokumentu-eshop
+
+# Instalace závislostí
 npm install
 ```
 
-## Spuštění
+### Vývoj
 
 ```bash
+# Spuštění dev serveru
 npm run dev
+
+# Aplikace je dostupná na http://localhost:3000
 ```
 
-Válka bude dostupná na http://localhost:3000
-
-## Build
+### Build
 
 ```bash
+# Production build
 npm run build
+
+# Spuštění production buildu
 npm start
 ```
 
-## Design Principy
+## 🌐 Deployment
 
-- **Moderní SaaS estetika** - čistý design, dostatek prostoru
-- **Vysoká konverze** - jasné CTA, přesvědčivý obsah
-- **Responsive** - mobile-first přístup
-- **Accessibility** - WCAG compliance
-- **Performance** - optimalizované assets
+Aplikace je optimalizovaná pro Vercel:
 
-## Barvy
+```bash
+# Deploy na Vercel
+vercel deploy
+```
 
-- Navy: `#071A3A`
-- Primary Blue: `#155EEF`
-- Accent: `#4F8CFF`
-- Background: `#F7F9FC`
-- Text: `#0F172A`
-- Text Muted: `#64748B`
-- Border: `#E2E8F0`
-- Success: `#16A34A`
+## 📝 Environment Variables
 
-## Typografie
+Vytvořte `.env.local` soubor (viz `.env.example`):
 
-- Font: Inter
-- H1: 64px
-- H2: 48px
-- H3: 32px
-- Body: 18px
+```env
+NEXT_PUBLIC_API_URL=https://api.example.com
+API_SECRET_KEY=your_secret_key
+# ... ostatní variables
+```
+
+## 🎨 Customizace
+
+### Barvy
+
+Barvy jsou definované v `tailwind.config.ts`:
+
+```typescript
+colors: {
+  primary: {
+    blue: '#003366',
+  },
+  accent: '#FF6B6B',
+  // ...
+}
+```
+
+### Typografie
+
+Typografie je definovaná v `tailwind.config.ts`:
+
+```typescript
+fontFamily: {
+  sans: ['Inter', 'sans-serif'],
+}
+```
+
+## 🧪 Testing
+
+```bash
+# Unit testy (když budou přidány)
+npm run test
+
+# E2E testy (když budou přidány)
+npm run test:e2e
+```
+
+## 🔍 SEO
+
+- Metadata v `lib/seo.ts`
+- Sitemap v `public/sitemap.xml`
+- Robots.txt v `public/robots.txt`
+- JSON-LD structured data v `components/JsonLd.tsx`
+- Open Graph tags
+- Twitter Card support
+
+## ♿ Accessibility
+
+- WCAG 2.1 AA compliance
+- Skip links
+- ARIA labels
+- Screen reader support
+- Keyboard navigation
+- Focus management
+
+## 📄 Licence
+
+MIT
+
+## 👨‍💻 Autor
+
+Acomputer2
+
+## 📞 Support
+
+info@kontrola-dokumentu-eshop.cz
